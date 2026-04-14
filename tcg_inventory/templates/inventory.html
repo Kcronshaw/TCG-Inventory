@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory</title>
+</head>
+<body>
+    <h1>Card Inventory</h1>
+    <ul>
+        {% for card in cards %}
+        <li>{{ card.name }} - {{ card.quantity }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_card' %}">Add New Card</a>
+</body>
+</html>
